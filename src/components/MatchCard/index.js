@@ -10,18 +10,17 @@ const MatchCard = props => {
   )}`
 
   return (
-    <li>
-      <div className="match-card-item">
-        <img
-          src={competingTeamLogo}
-          alt={`competing team ${competingTeam}`}
-          className="competing-team-logo"
-        />
-        <p className="competing-team">{competingTeam}</p>
-        <p className="result">{result}</p>
-        <p className={matchStatusClassName}>{matchStatus}</p>
-      </div>
+    <li className="match-item">
+      <img
+        src={competingTeamLogo}
+        className="competing-team-logo"
+        alt={`competing team ${competingTeam}`}
+      />
+      <p className="competing-team-name">{competingTeam}</p>
+      <p className="result">{result}</p>
+      <p className={matchStatusClassName}>{matchStatus}</p>
     </li>
   )
 }
+
 export default MatchCard
